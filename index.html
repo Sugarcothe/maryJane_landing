@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear MaryJane | First Nigerian Canabis Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img class="logo" src="images/logo.gif" alt="Logo"/></a>
+            <!-- navigation -->
+            <div class="toggleMenu" onclick="menuToggle()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletters</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>AT <span>4:20</span><br>We are coming...</h2>
+                <p>And the Earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and God saw that it was good. </p>
+                <a href="#">View All Product</a>
+            </div>
+            <div class="imgBox">
+                <img class="pepsi" src="images/bong.png" alt="weed">
+            </div>
+        </div>
+
+        <ul class="thumb">
+        <!-- Change page decoration like background color and img. for change called onclick function -->
+            <li><img onclick="imgSlider('images/bong.png');changeBgColor('#1d9c09')" src="images/igbo.png" alt=""></li>
+
+            <li><img onclick="imgSlider('images/crusher.png');changeBgColor('#9c8609')" src="images/yellow.png" alt=""></li>
+
+            <li><img onclick="imgSlider('images/cana.png');changeBgColor('#8a0c03')" src="images/red.png" alt=""></li>
+
+        </ul>
+        <ul class="social">
+            <!-- Social Media Icon -->
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+<!-- javascript Section -->
+<script type="text/javascript">
+// Function For Change Pepsi Img when click on thumb img
+    function imgSlider(anything){
+        document.querySelector('.pepsi').src =anything;
+    }
+// Function For Change Background Color
+    function changeBgColor(color) {
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+// Function for Toggling Navigation
+    function menuToggle() {
+        const toggleMenu = document.querySelector('.toggleMenu');
+        const navigation = document.querySelector('.navigation');
+        toggleMenu.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+</script>
+</body>
+</html>
+<!--
+Project Owner : Tonmoy Acherjee
+Github Link   : https://github.com/tonmoyac
+Linkding      : https://www.linkedin.com/in/tonmoyac -->
